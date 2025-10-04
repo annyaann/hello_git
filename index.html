@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мой виш-лист проектов</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #2c3e50, #3498db);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .wishlist {
+            padding: 40px 30px;
+        }
+
+        .project-card {
+            background: #f8f9fa;
+            border-left: 5px solid #3498db;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .project-card h3 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 1.4em;
+        }
+
+        .project-card p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tech-tag {
+            background: #3498db;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.9em;
+        }
+
+        .status {
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 15px;
+            font-size: 0.9em;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .planned {
+            background: #ffeaa7;
+            color: #e17055;
+        }
+
+        .in-progress {
+            background: #81ecec;
+            color: #00cec9;
+        }
+
+        .completed {
+            background: #55efc4;
+            color: #00b894;
+        }
+
+        .priority {
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 0.8em;
+            margin-left: 10px;
+            background: #e84393;
+            color: white;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background: #f8f9fa;
+            color: #666;
+            border-top: 1px solid #eee;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎯 Мой виш-лист проектов</h1>
+            <p>Проекты, которые я планирую реализовать</p>
+        </div>
+
+        <div class="wishlist">
+            <div class="project-card">
+                <h3>🤖 Телеграм бот 
+                    <span class="priority">Высокий приоритет</span>
+                </h3>
+                <p>Умный бот для автоматизации повседневных задач, уведомлений и взаимодействия с пользователями через Telegram.</p>
+                <div class="tech-stack">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">Telegram API</span>
+                    <span class="tech-tag">SQLite</span>
+                    <span class="tech-tag">aiogram</span>
+                </div>
+                <span class="status in-progress">В разработке</span>
+            </div>
+
+            <div class="project-card">
+                <h3>📰 Анализ новостных заголовков</h3>
+                <p>Система для сбора, анализа и классификации новостных заголовков с использованием NLP и машинного обучения.</p>
+                <div class="tech-stack">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">NLTK</span>
+                    <span class="tech-tag">BeautifulSoup</span>
+                    <span class="tech-tag">scikit-learn</span>
+                </div>
+                <span class="status planned">Запланирован</span>
+            </div>
+
+            <div class="project-card">
+                <h3>🎮 Мини-игра</h3>
+                <p>Увлекательная браузерная игра с простой механикой, но интересным геймплеем. Идеально для изучения игровой разработки.</p>
+                <div class="tech-stack">
+                    <span class="tech-tag">JavaScript</span>
+                    <span class="tech-tag">HTML5 Canvas</span>
+                    <span class="tech-tag">CSS3</span>
+                    <span class="tech-tag">Phaser.js</span>
+                </div>
+                <span class="status planned">Запланирован</span>
+            </div>
+
+            <div class="project-card">
+                <h3>📚 Библиотека</h3>
+                <p>Веб-приложение для управления личной библиотекой книг с возможностью добавления, поиска и категоризации литературы.</p>
+                <div class="tech-stack">
+                    <span class="tech-tag">React</span>
+                    <span class="tech-tag">Node.js</span>
+                    <span class="tech-tag">MongoDB</span>
+                    <span class="tech-tag">Express</span>
+                </div>
+                <span class="status planned">Запланирован</span>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Обновлено: <span id="current-date"></span></p>
+        </div>
+    </div>
+
+    <script>
+        // Добавляем текущую дату
+        document.getElementById('current-date').textContent = new Date().toLocaleDateString('ru-RU', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+        });
+    </script>
+</body>
+</html>
